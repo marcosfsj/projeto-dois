@@ -1,0 +1,22 @@
+/* What an element should look like anywhere in the page. */
+/* So the reset should put the element back to what has been defined here. */
+/* Here we do not create classes, we only style html elements (body, a, p, h1). */
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	/* Use rem as font and length unit: 
+	Example: 1rem = 62.5% of 16px (Usual default for most browsers) = 10px. 
+	10px is to simplify the calculation of size and length, 2rem = 20px. */
+	font-size: 62.5%; 
+}
+
+body {
+	box-sizing: border-box;
+	padding: 3rem;
+}

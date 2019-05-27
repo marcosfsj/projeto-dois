@@ -1,33 +1,37 @@
-.App {
-  text-align: center;
-}
+/* Here goes any reusable variable that you may want to reuse, making it easy for you to change. */
+/* What an element should look like anywhere in the page. */
+/* So the reset should put the element back to what has been defined here. */
+/* Here we do not create classes, we only style html elements (body, a, p, h1). */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
+html {
+  /* Use rem as font and length unit: 
+	Example: 1rem = 62.5% of 16px (Usual default for most browsers) = 10px. 
+	10px is to simplify the calculation of size and length, 2rem = 20px. */
+  font-size: 62.5%; }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+body {
+  box-sizing: border-box;
+  padding: 3rem; }
 
-.App-link {
-  color: #61dafb;
-}
+/* Here we style major ids in the page like header, main and footer. Probably the only */
+/* time when we will use ids to style. */
+header {
+  font-size: 1.6rem; }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+#main {
+  font-size: 1.6rem; }
+
+footer {
+  font-size: 1.6rem; }
+
+/* Here goes styles that are applicable on the diferent sessions of your page. */
+/* So, le us say, your header is divided by three sessions, the navbar, a search element and the companie's logo. */
+/* So within this file goes the styles specific for those three sessions. Here can create classes. */
+nav ul li {
+  text-decoration: none; }
