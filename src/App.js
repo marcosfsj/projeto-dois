@@ -5,26 +5,35 @@ import Landing from './components/layout/Landing';
 import Footer from './components/layout/Footer';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
+import Alert from './components/alert/Alert';
+
+// Redux
+import { Provider } from 'react-redux';
+import store from './store';
+
 import './App.css';
 
 const App = () => (
-  <Router>
-    <Fragment>
-      <header>
-        <Navbar></Navbar>
-      </header>
-      <div id="main">
-        <Route exact path='/' component={Landing} />
-        <Switch>
-          <Route exact path="/register" component={Register} />
-          <Route exact path="/Login" component={Login} />
-        </Switch>
-      </div>
-      <footer>
-        <Footer></Footer>
-      </footer>
-    </Fragment>
-  </Router>
+  <Provider store={store}>
+    <Router>
+      <Fragment>
+        <header>
+          <Navbar></Navbar>
+        </header>
+        <div id="main">
+          <Route exact path='/' component={Landing} />
+          <Alert />
+          <Switch>
+            <Route exact path="/register" component={Register} />
+            <Route exact path="/Login" component={Login} />
+          </Switch>
+        </div>
+        <footer>
+          <Footer></Footer>
+        </footer>
+      </Fragment>
+    </Router>
+  </Provider>
 );
 
 export default App;
